@@ -1,0 +1,33 @@
+{
+  "name": "music-by-weather-api",
+  "version": "1.0.0",
+  "description": "Um estudo organizado por um grupo de pesquisadores desocupados demonstrou que as pessoas tendem a preferir diferentes gêneros musicais de acordo com a temperatura ambiente. Baseado nesta incrível descoberta, contratamos você para desenvolver um serviço revolucionário que irá sugerir músicas ao usuário de acordo com a temperatura atual da cidade dele! Não é sensacional?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/create-server.js",
+    "dev": "nodemon ./server/create-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-ssilva/music-by-weather-api.git"
+  },
+  "author": "m-ssilva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m-ssilva/music-by-weather-api/issues"
+  },
+  "homepage": "https://github.com/m-ssilva/music-by-weather-api#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "filter-files": "^0.4.0",
+    "koa": "^2.10.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.15",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}
