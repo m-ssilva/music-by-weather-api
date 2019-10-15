@@ -28,7 +28,6 @@ const getToken = () => {
       return lastTokenRequest
     })
       .catch(error => {
-        console.log(error)
         throw new Error('SPOTIFY_AUTHENTICATION_FAILED')
       })
   } else return lastTokenRequest
@@ -45,7 +44,6 @@ const getTracksURLByCategory = async category => {
   }).then(response => {
     return response.data.playlists.items[0].tracks.href
   }).catch(err => {
-    console.log(err)
     throw new Error('SPOTIFY_GET_PLAYLIST_ERROR')
   })
 
@@ -62,7 +60,6 @@ const getSongsByURL = async tracksUrl => {
     }
   }).then(response => response.data)
     .catch(err => {
-      console.log(err)
       throw new Error('SPOTIFY_GET_SONGS_ERROR')
     })
   return songs
