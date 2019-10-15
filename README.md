@@ -36,3 +36,16 @@ Além disso, indique como rodar o seu serviço localmente ou disponibilize uma v
 - Você também pode, a seu critério, utilizar um serviço terceiro para gerar as sugestões de músicas para as playlists que você irá retornar. Uma boa dica nesse caso é a [API do Spotify](https://developer.spotify.com/documentation/web-api/). O Spotify tem inclusive  uma lista de bibliotecas, em diversas linguagens, para acesso à API.
 
 - Caso queira deixar seu serviço disponível online, uma boa dica é o [Heroku](https://www.heroku.com/). Ele permite que você publique algumas aplicações gratuitamente.
+
+## Instalação
+
+- Clone o projeto  
+`$ git clone git@github.com:m-ssilva/music-by-weather-api.git`  
+- Acesse o diretório  
+`$ cd ./music-by-weather-api`  
+- Instale os pacotes  
+`$ npm install`  
+- Rode o projeto  
+`$ npm start`
+- Faça uma requisição na URL abaixo informando o nome de uma cidade conforme exemplo abaixo:  
+`curl http://localhost:3000/v1?city=Campinas`
