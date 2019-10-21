@@ -58,8 +58,8 @@ Lembrando que é necessário informar a cidade utilizando query param, conforme 
 
 ## Implementações
 
-[X] - Implementação das regras de negócio  
-[ ] - Docker  
-[ ] - Redis  
-[X] - Testes  
-[ ] - CI/CD
+- [X] - Implementação das regras de negócio  
+- [ ] - Docker  
+- [ ] - Redis  
+- [X] - Testes  
+- [ ] - CI/CD
