@@ -49,3 +49,17 @@ Além disso, indique como rodar o seu serviço localmente ou disponibilize uma v
 `$ npm start`
 - Faça uma requisição na URL abaixo informando o nome de uma cidade conforme exemplo abaixo:  
 `curl http://localhost:3000/v1?city=Campinas`
+
+## API Online
+
+Para utilizar a versão online da API, realize um request no endereço abaixo:  
+`https://music-by-weather-api.herokuapp.com/v1?city=Campinas`  
+Lembrando que é necessário informar a cidade utilizando query param, conforme exemplo acima.
+
+## Implementações
+
+[X] - Implementação das regras de negócio  
+[ ] - Docker  
+[ ] - Redis  
+[X] - Testes  
+[ ] - CI/CD
