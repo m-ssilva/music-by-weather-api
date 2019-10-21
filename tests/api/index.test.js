@@ -6,6 +6,7 @@ const popCategoryMock = require('../mocks/spotify-pop-category.json')
 const weatherCampinas = require('../mocks/weather-campinas.json')
 const expectedPopPlaylist = require('../expected/pop-playlist.json')
 const config = require('../../config')
+const spotifyService = require('../../src/services/spotify')
 
 let request
 let server
@@ -127,5 +128,15 @@ describe('GET on /v1', () => {
     await request
       .get('/v1?city=Campinas')
       .expect(500, { message: 'Oops, ocorreu um erro ao solicitar suas músicas a API do Spotify' })
+  })
+
+  test('return 500 with a default message when a non mapped exception is throw', async () => {
+    jest
+      .spyOn(spotifyService, 'getPlaylistByCategory')
+      .mockImplementation(() => { throw new Error('FAKE_ERROR') })
+
+    await request
+      .get('/v1?city=Campinas')
+      .expect(500, { message: 'Oops, ocorreu um erro em sua solicitação' })
   })
 })
