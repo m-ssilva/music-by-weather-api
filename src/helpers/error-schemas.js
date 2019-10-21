@@ -10,6 +10,12 @@ const errorSchemas = {
     body: {
       message: 'Erro ao consultar temperatura da cidade'
     }
+  },
+  'INVALID_TEMPERATURE': {
+    status: 500,
+    body: {
+      message: 'Oops, ocorreu um erro ao consultar a temperatura da cidade'
+    }
   }
 }
 

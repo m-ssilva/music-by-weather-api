@@ -52,7 +52,7 @@ const getTracksURLByCategory = async category => {
 
 const getSongsByURL = async tracksUrl => {
   const { token } = await getToken()
-  const songs = axios({
+  const songs = await axios({
     url: tracksUrl,
     method: 'get',
     headers: {

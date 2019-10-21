@@ -5,7 +5,9 @@ const getWeatherByCityName = name =>
   axios({
     method: 'get',
     url: `http://api.openweathermap.org/data/2.5/weather?q=${name}&units=metric&APPID=${config.weather_api.token}`
-  }).then(response => response.data)
+  }).then(response => {
+    return response.data
+  })
     .catch(err => {
       if (err.response.status === 404) throw new Error('CITY_NOT_FOUND')
       throw new Error('WEATHER_REQUEST_FAILED')

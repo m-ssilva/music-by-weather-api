@@ -4,9 +4,10 @@
   "description": "Um estudo organizado por um grupo de pesquisadores desocupados demonstrou que as pessoas tendem a preferir diferentes gêneros musicais de acordo com a temperatura ambiente. Baseado nesta incrível descoberta, contratamos você para desenvolver um serviço revolucionário que irá sugerir músicas ao usuário de acordo com a temperatura atual da cidade dele! Não é sensacional?",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node ./server/create-server.js",
-    "dev": "nodemon ./server/create-server.js"
+    "dev": "nodemon ./server/create-server.js",
+    "cover": "npx jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,9 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "nodemon": "^1.19.3"
+    "jest": "^24.9.0",
+    "nock": "^11.4.0",
+    "nodemon": "^1.19.3",
+    "supertest": "^4.0.2"
   }
 }
