@@ -26,10 +26,9 @@ const getToken = () => {
         expiresIn: moment().add(1, 'hour')
       }
       return lastTokenRequest
+    }).catch(err => {
+      throw new Error('SPOTIFY_AUTHENTICATION_FAILED')
     })
-      .catch(error => {
-        throw new Error('SPOTIFY_AUTHENTICATION_FAILED')
-      })
   } else return lastTokenRequest
 }
 

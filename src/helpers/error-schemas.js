@@ -16,6 +16,12 @@ const errorSchemas = {
     body: {
       message: 'Oops, ocorreu um erro ao consultar a temperatura da cidade'
     }
+  },
+  'SPOTIFY_AUTHENTICATION_FAILED': {
+    status: 500,
+    body: {
+      message: 'Oops, ocorreu um erro ao autenticar com a API do Spotify'
+    }
   }
 }
 

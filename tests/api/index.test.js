@@ -21,8 +21,21 @@ afterEach(() => {
 })
 
 describe('GET on /v1', () => {
-  test('return 200 and pop playlist when temperatature is higher then 25 celsius', async () => {
+  test('return 500 when spotify authentication fails', async () => {
+    nock('http://api.openweathermap.org')
+      .get(`/data/2.5/weather?q=FakeCity&units=metric&APPID=${config.weather_api.token}`)
+      .reply(200, weatherCampinas)
 
+    nock('https://accounts.spotify.com')
+      .post('/api/token?grant_type=client_credentials')
+      .reply(500)
+
+    await request
+      .get('/v1?city=FakeCity')
+      .expect(500, { message: 'Oops, ocorreu um erro ao autenticar com a API do Spotify' })
+  })
+
+  test('return 200 and pop playlist when temperatature is higher then 25 celsius', async () => {
     nock('http://api.openweathermap.org')
       .get(`/data/2.5/weather?q=Campinas&units=metric&APPID=${config.weather_api.token}`)
       .reply(200, weatherCampinas)
@@ -42,5 +55,25 @@ describe('GET on /v1', () => {
     await request
       .get('/v1?city=Campinas')
       .expect(200, expectedPopPlaylist)
+  })
+
+  test('return 500 when weather API throws an error', async () => {
+    nock('http://api.openweathermap.org')
+      .get(`/data/2.5/weather?q=FakeCity&units=metric&APPID=${config.weather_api.token}`)
+      .reply(500, 'FAKE_ERROR')
+
+    await request
+      .get('/v1?city=FakeCity')
+      .expect(500, { message: 'Erro ao consultar temperatura da cidade' })
+  })
+
+  test('return 400 when a invalid city is requested', async () => {
+    nock('http://api.openweathermap.org')
+      .get(`/data/2.5/weather?q=FakeCity&units=metric&APPID=${config.weather_api.token}`)
+      .reply(404, 'INVALID_CITY')
+
+    await request
+      .get('/v1?city=FakeCity')
+      .expect(400, { message: 'Cidade informada não foi encontrada' })
   })
 })
