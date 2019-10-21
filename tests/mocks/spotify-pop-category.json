@@ -1,0 +1,47 @@
+{
+  "playlists": {
+    "href": "https://api.spotify.com/v1/browse/categories/pop/playlists?offset=0&limit=1",
+    "items": [
+      {
+        "collaborative": false,
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXcBWIGoYBM5M",
+        "id": "37i9dQZF1DXcBWIGoYBM5M",
+        "images": [
+          {
+            "height": null,
+            "url": "https://pl.scdn.co/images/pl/default/0ff2a13be4a9a78fd38955dfb01853fdc96ad852",
+            "width": null
+          }
+        ],
+        "name": "Today's Top Hits",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTU3MTYzMDQ2MCwwMDAwMDM3NTAwMDAwMTZkZWM3OWFjYWIwMDAwMDE2ZGRiMTcxYzg1",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXcBWIGoYBM5M/tracks",
+          "total": 52
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXcBWIGoYBM5M"
+      }
+    ],
+    "limit": 1,
+    "next": "https://api.spotify.com/v1/browse/categories/pop/playlists?offset=1&limit=1",
+    "offset": 0,
+    "previous": null,
+    "total": 2
+  }
+}
