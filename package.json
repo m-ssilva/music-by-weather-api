@@ -7,7 +7,8 @@
     "test": "jest",
     "start": "node ./server/create-server.js",
     "dev": "nodemon ./server/create-server.js",
-    "cover": "npx jest --coverage"
+    "cover": "npx jest --coverage",
+    "lint": "eslint . --fix"
   },
   "repository": {
     "type": "git",

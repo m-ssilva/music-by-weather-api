@@ -10,7 +10,7 @@ const logger = new winston.createLogger({
 })
 
 logger.stream = {
-  write: function (message, encoding) {
+  write (message, encoding) {
     logger.info(message)
   }
 }

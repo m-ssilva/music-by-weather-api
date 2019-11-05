@@ -1,0 +1,5 @@
+# Server Folder
+/server/*.js
+
+# All tests files
+*.test.js

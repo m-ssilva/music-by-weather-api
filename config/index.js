@@ -18,15 +18,15 @@ module.exports = {
       filename: 'app.log',
       handleExceptions: true,
       json: true,
-      maxsize: 5242880, // 5MB
+      maxsize: 5242880,
       maxFiles: 5,
-      colorize: false,
+      colorize: false
     },
     console: {
       level: 'debug',
       handleExceptions: true,
       json: false,
-      colorize: true,
+      colorize: true
     }
   }
 }
