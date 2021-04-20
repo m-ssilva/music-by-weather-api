@@ -1,0 +1,11 @@
+---
+application:
+  name: "music-by-weather-api"
+  project: "music-by-weather"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-music-by-weather-api"
+  routes:
+  - application_name: "music-by-weather-api"
+    paths:
+    - "/*"
